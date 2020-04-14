@@ -1,30 +1,25 @@
 # Internship Interview Questions
 *Please include explanation along with your answers.*
 
-1. Tell us about a newer (less than five years old) web technology you like and why?
+1. Please describe yourself using JSON
 
-2. What will be the value of the following (please include explanation):
+2. Tell us about a newer (less than five years old) web technology you like and why?
+
+3. In Java, the maximum size of an Array needs to be set upon initialization. Supposedly, we want something like an Array that is dynamic, such that we can add more items to it over time. Suggest how we can accomplish that?
+
+4. Explain this block of code in Big-O notation
     ```
-    class Gecko
-      def self.a(b)
-        if b > 0
-          b * b
-        end
-      end
-    end
+    void sampleCode(int arr[], int size)
+    {
+        for (int i = 0; i < size; i++)
+        {
+            for (int j = 0; j < size; j++)
+            {
+                printf("%d = %d\n", arr[i], arr[j]);
+            }
+         }
+    }
     ```
 
-    * [ ] (A) Gecko.a(0)
-    * [ ] (B) Gecko.a(4)
-
-3. You are helping your company to host a web application on Amazon Web Services. As part of designing the architecture to host the application, you have the option to deploy the application in the following manner:-
-
-    * [ ] (A) Single availability zone
-    * [ ] (B) Multiple availability zones in a single region
-    * [ ] (C) Multi regions
-
-
-    *Describe which option you would choose and why? Also explain why you did not choose the other options.*
-
-4. One of our developers built a page to display market information for over 500 cryptocurrencies in a single page. After several days, our support team started receiving complaints from our users that they are not able to view the website and it takes too long to load. What do you think causes this issue and suggest at least 3 ideas to improve the situation. 
+5. One of our developers built a page to display market information for over 500 cryptocurrencies in a single page. After several days, our support team started receiving complaints from our users that they are not able to view the website and it takes too long to load. What do you think causes this issue and suggest at least 3 ideas to improve the situation. 
 
