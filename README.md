@@ -23,3 +23,6 @@
 
 5. One of our developers built a page to display market information for over 500 cryptocurrencies in a single page. After several days, our support team started receiving complaints from our users that they are not able to view the website and it takes too long to load. What do you think causes this issue and suggest at least 3 ideas to improve the situation. 
 
+6. In Javascript, What is a "closure"? How does JS Closure works?
+
+7. In Javascript, what is the difference between var, let, and const. When should I them?
