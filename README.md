@@ -5,7 +5,7 @@
 
 2. Tell us about a newer (less than five years old) web technology you like and why?
 
-3. In Java, the maximum size of an Array needs to be set upon initialization. Supposedly, we want something like an Array that is dynamic, such that we can add more items to it over time. Suggest how we can accomplish that?
+3. In Java, the maximum size of an Array needs to be set upon initialization. Supposedly, we want something like an Array that is dynamic, such that we can add more items to it over time. Suggest how we can accomplish that (other than using ArrayList)?
 
 4. Explain this block of code in Big-O notation
     ```
