@@ -25,4 +25,16 @@
 
 6. In Javascript, What is a "closure"? How does JS Closure works?
 
-7. In Javascript, what is the difference between var, let, and const. When should I them?
+7. In Javascript, what is the difference between var, let, and const. When should I use them?
+
+---
+# Simple Coding Assessment
+
+Build a URL shortener service (refers to https://bitly.com)
+
+requirement:
+1. build a method/function where it takes in an URL (example www.coingecko.com), and the output is a shortened URL
+2. the length of the shortened URL must be unique.
+3. build a method/function where it takes in the shortened URL in #1, and the output is the full URL.
+4. you must be able to demo your code to us.
+5. **(bonus point)** host it on a website OR make it an JAVA executable OR have your code function publicly accessible.
