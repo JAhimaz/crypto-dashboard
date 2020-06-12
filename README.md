@@ -38,3 +38,10 @@ requirement:
 3. build a method/function where it takes in the shortened URL in #1, and the output is the full URL.
 4. you must be able to demo your code to us.
 5. **(bonus point)** host it on a website OR make it an JAVA executable OR have your code function publicly accessible.
+
+---
+# Submission instruction
+
+1. fork this repo
+2. creates a Merge Request against the master branch (after completion)
+3. grant repo access (collaborators) to jack@coingecko.com and tmlee@coingecko.com
