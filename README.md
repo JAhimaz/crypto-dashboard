@@ -37,7 +37,8 @@ requirement:
 2. the length of the shortened URL must be unique.
 3. build a method/function where it takes in the shortened URL in #1, and the output is the full URL.
 4. you must be able to demo your code to us.
-5. **(bonus point)** host it on a website OR make it an JAVA executable OR have your code function publicly accessible.
+5. **(bonus point)** use Ruby On Rails as the language/framework.
+6. **(bonus point)** host it on a website.
 
 ---
 # Submission instruction
