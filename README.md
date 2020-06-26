@@ -34,7 +34,7 @@ Build a URL shortener service (refers to https://bitly.com)
 
 requirement:
 1. build a method/function where it takes in an URL (example www.coingecko.com), and the output is a shortened URL
-2. the length of the shortened URL must be unique.
+2. the shortened URL must be unique.
 3. build a method/function where it takes in the shortened URL in #1, and the output is the full URL.
 4. you must be able to demo your code to us.
 5. **(bonus point)** use Ruby On Rails and/or ReactJS as the language/framework.
