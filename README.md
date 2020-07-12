@@ -21,28 +21,37 @@
     }
     ```
 
-5. One of our developers built a page to display market information for over 500 cryptocurrencies in a single page. After several days, our support team started receiving complaints from our users that they are not able to view the website and it takes too long to load. What do you think causes this issue and suggest at least 3 ideas to improve the situation. 
+5. One of our developers built a page to display market information for over 500 cryptocurrencies in a single page. After several days, our support team started receiving complaints from our users that they are not able to view the website and it takes too long to load. What do you think causes this issue and suggest at least 3 ideas to improve the situation.
 
 6. In Javascript, What is a "closure"? How does JS Closure works?
 
 7. In Javascript, what is the difference between var, let, and const. When should I use them?
 
+8. Share with us one book that has changed your perspective in life. How did it change your life?
+
+9. What is the thing you believe in that is true, that most people disagree with?
+
+10. What are your thoughts on the subject of Arts and Humanities?
+
 ---
 # Simple Coding Assessment
 
-Build a URL shortener service (refers to https://bitly.com)
+Build a Cryptocurrency Market dashboard showing market data.
 
 requirement:
-1. build a method/function where it takes in an URL (example www.coingecko.com), and the output is a shortened URL
-2. the shortened URL must be unique.
-3. build a method/function where it takes in the shortened URL in #1, and the output is the full URL.
-4. you must be able to demo your code to us.
-5. **(bonus point)** use Ruby On Rails and/or ReactJS as the language/framework.
-6. **(bonus point)** host it on a website.
+1. using the API endpoints found in https://www.coingecko.com/en/api, build a cryptocurrency market dashboard page.
+2. The page should be able to list at least 20 coins.
+3. The page should show price, volume, name, symbol of the coin.
+4. The page should show the graph of 7 days data, using the **sparkline** returned from api. For example sparkline data can be obtained using [https://api.coingecko.com/api/v3/coins/bitcoin?sparkline=true](https://api.coingecko.com/api/v3/coins/bitcoin?sparkline=true) or [https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&sparkline=true](https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&sparkline=true)
+5. The page should allow user to "favorite" coins.
+6. build another page "favorite", to only show the favorite coins.
+5. **(bonus)** The page should allow user to switch currency for ("usd", "myr", "btc"). The price and volume should display the number in the currency selected.
+6. **(bonus)** Host this on a website, or a mobile app.
+7. We will schedule a video call with you should we decide to proceed with your interview.
+8. You must be able to demo your submission to us.
 
 ---
 # Submission instruction
 
-1. fork this repo
-2. creates a Merge Request against the master branch (after completion)
-3. grant repo access (collaborators) to jack@coingecko.com and tmlee@coingecko.com
+1. Fork this repo.
+2. Creates a Merge Request in this repo after completion.
