@@ -1,7 +1,7 @@
 # Internship Interview Questions
 *Please include explanation along with your answers.*
 
-1. Please describe yourself using JSON (include your internship start/end date).
+1. Please describe yourself using JSON (include your internship start/end date, your current location).
 
 2. Tell us about a newer (less than five years old) web technology you like and why?
 
