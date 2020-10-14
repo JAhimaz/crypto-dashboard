@@ -45,13 +45,14 @@ requirement:
 4. The page should show the graph of 7 days data, using the **sparkline** returned from api. For example sparkline data can be obtained using [https://api.coingecko.com/api/v3/coins/bitcoin?sparkline=true](https://api.coingecko.com/api/v3/coins/bitcoin?sparkline=true) or [https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&sparkline=true](https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&sparkline=true)
 5. The page should allow user to "favorite" coins.
 6. build another page "favorite", to only show the favorite coins.
-5. **(bonus)** The page should allow user to switch currency for ("usd", "myr", "btc"). The price and volume should display the number in the currency selected.
+5. **(bonus)** The page should allow user to switch currency. The price and volume should display the number in the currency selected. Use this endpoint to achieve the goal https://api.coingecko.com/api/v3/exchange_rates
 6. **(bonus)** Host this on a website, or a mobile app.
-7. We will schedule a video call with you should we decide to proceed with your interview.
-8. You must be able to demo your submission to us.
+7. We will schedule a video call with you should we decide to proceed with your interview. You must be able to demo your submission to us.
 
 ---
 # Submission instruction
 
 1. Fork this repo.
-2. Creates a Merge Request in this repo after completion.
+2. In your own git repo, create a new branch, and work on the Assessment.
+3. Once you are done, create a merge request (or pull request) against your master branch
+4. Share the link and access to your gitlab repo in the job application email.
