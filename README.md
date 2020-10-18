@@ -56,3 +56,5 @@ requirement:
 2. In your own git repo, create a new branch, and work on the Assessment.
 3. Once you are done, create a merge request (or pull request) against your master branch
 4. Share the link and access to your gitlab repo in the job application email.
+
+Note: Do not create Merge Request against this repository, else your submission will be automatically disqualified.
