@@ -3,11 +3,9 @@
 
 1. Please describe yourself using JSON (include your internship start/end date, your current location).
 
-2. Tell us about a newer (less than five years old) web technology you like and why?
+1. In Java, the maximum size of an Array needs to be set upon initialization. Supposedly, we want something like an Array that is dynamic, such that we can add more items to it over time. Suggest how we can accomplish that (other than using ArrayList)?
 
-3. In Java, the maximum size of an Array needs to be set upon initialization. Supposedly, we want something like an Array that is dynamic, such that we can add more items to it over time. Suggest how we can accomplish that (other than using ArrayList)?
-
-4. Explain this block of code in Big-O notation.
+1. Explain this block of code in Big-O notation.
     ```
     void sampleCode(int arr[], int size)
     {
@@ -21,17 +19,15 @@
     }
     ```
 
-5. One of our developers built a page to display market information for over 500 cryptocurrencies in a single page. After several days, our support team started receiving complaints from our users that they are not able to view the website and it takes too long to load. What do you think causes this issue and suggest at least 3 ideas to improve the situation.
+1. In Javascript, What is a "closure"? How does JS Closure works?
 
-6. In Javascript, What is a "closure"? How does JS Closure works?
+1. In Javascript, what is the difference between var, let, and const. When should I use them?
 
-7. In Javascript, what is the difference between var, let, and const. When should I use them?
+1. Share with us one book that has changed your perspective in life. How did it change your life?
 
-8. Share with us one book that has changed your perspective in life. How did it change your life?
+1. What is the one thing you believe in that is true, that most people disagree with?
 
-9. What is the thing you believe in that is true, that most people disagree with?
-
-10. What are your thoughts on the subject of Arts and Humanities?
+1. What are your thoughts on the subject of Arts and Humanities?
 
 ---
 # Simple Coding Assessment
