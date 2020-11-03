@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Internship Interview Questions
+*Please include explanation along with your answers.*
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Please describe yourself using JSON (include your internship start/end date, your current location).
 
-## Available Scripts
+1. In Java, the maximum size of an Array needs to be set upon initialization. Supposedly, we want something like an Array that is dynamic, such that we can add more items to it over time. Suggest how we can accomplish that (other than using ArrayList)?
 
-In the project directory, you can run:
+1. Explain this block of code in Big-O notation.
+    ```
+    void sampleCode(int arr[], int size)
+    {
+        for (int i = 0; i < size; i++)
+        {
+            for (int j = 0; j < size; j++)
+            {
+                printf("%d = %d\n", arr[i], arr[j]);
+            }
+         }
+    }
+    ```
 
-### `npm start`
+1. In Javascript, What is a "closure"? How does JS Closure works?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. In Javascript, what is the difference between var, let, and const. When should I use them?
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Share with us one book that has changed your perspective in life. How did it change your life?
 
-### `npm test`
+1. What is the one thing you believe in that is true, that most people disagree with?
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. What are your thoughts on the subject of Arts and Humanities?
 
-### `npm run build`
+---
+# Simple Coding Assessment
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Build a Cryptocurrency Market dashboard showing market data.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+requirement:
+1. using the API endpoints found in https://www.coingecko.com/en/api, build a cryptocurrency market dashboard page.
+2. The page should be able to list at least 20 coins.
+3. The page should show price, volume, name, symbol of the coin.
+4. The page should show the graph of 7 days data, using the **sparkline** returned from api. For example sparkline data can be obtained using [https://api.coingecko.com/api/v3/coins/bitcoin?sparkline=true](https://api.coingecko.com/api/v3/coins/bitcoin?sparkline=true) or [https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&sparkline=true](https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&sparkline=true)
+5. The page should allow user to "favorite" coins.
+6. build another page "favorite", to only show the favorite coins.
+5. **(bonus)** The page should allow user to switch currency. The price and volume should display the number in the currency selected. Use this endpoint to achieve the goal https://api.coingecko.com/api/v3/exchange_rates
+6. **(bonus)** Host this on a website, or a mobile app.
+7. We will schedule a video call with you should we decide to proceed with your interview. You must be able to demo your submission to us.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
+# Submission instruction
 
-### `npm run eject`
+1. Fork this repo.
+2. In your own git repo, create a new branch, and work on the Assessment.
+3. Once you are done, create a merge request (or pull request) against your master branch
+4. Share the link and access to your gitlab repo in the job application email.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Note: Do not create Merge Request against this repository, else your submission will be automatically disqualified.
