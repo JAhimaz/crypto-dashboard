@@ -1,6 +1,8 @@
+@import "root.css";
+
 .header-title {
-    color: #9a9b9c;
-    font-family: Consolas, "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
-    padding-left: 15px;
-    padding-top: 5px;
+    color: var(--main-colour);
+    font-family: var(--font);
+    padding: 10px 0px;
+    padding-left: 30px !important;
 }
