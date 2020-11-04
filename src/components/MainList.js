@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Coins from './Coins';
 import Pages from './Pages';
+import Currency from './Currency';
 import axios from 'axios';
 
 function MainList(){
@@ -11,6 +12,7 @@ function MainList(){
     const [currentPage, setCurrentPage] = useState(1);
     const [coinsPerPage, setCoinsPerPage] = useState(20);
     const [currency, setCurrency] = useState("usd");
+    const [unit, setUnit] = useState('$');
 
     useEffect(() => {
         const fetchCoins = async () => {
@@ -23,11 +25,15 @@ function MainList(){
     
         fetchCoins();
 
-    }, [currentPage]);
+    }, [currentPage, currency]);
 
     //Change Page
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
+    //Change Currency
+    const chCurrency = (changedCurrency) => setCurrency(changedCurrency);
+    const currUnit = (changedUnit) => setUnit(changedUnit); 
+    
     // Getting Current Coins
     // const indexOfLastCoin = currentPage * coinsPerPage;
     // const indexOfFirstCoin = indexOfLastCoin - coinsPerPage;
@@ -35,7 +41,8 @@ function MainList(){
 
     return(
       <div>
-            <Coins coins={coins} loading={loading} />
+            <Currency chCurrency={chCurrency} currUnit={currUnit}></Currency>
+            <Coins coins={coins} loading={loading} unit={unit} />
             <Pages coinsPerPage={coinsPerPage} totalPosts={coins.length} activePage={currentPage} paginate={paginate}/>
       </div>
     );

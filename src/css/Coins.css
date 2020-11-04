@@ -52,6 +52,10 @@ th.number, th.coin-image, th.coin, th.symbol, th.price{
         table-layout: fixed;
     }
     
+    th.favourite{
+        width: 4%
+    }
+
     th.number{
         width: 5%;
     }
