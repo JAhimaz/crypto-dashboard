@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/internship-interview-questions/static/css/main.7c1376c5.chunk.css",
-    "main.js": "/internship-interview-questions/static/js/main.a94e49b2.chunk.js",
-    "main.js.map": "/internship-interview-questions/static/js/main.a94e49b2.chunk.js.map",
-    "runtime-main.js": "/internship-interview-questions/static/js/runtime-main.d5258cea.js",
-    "runtime-main.js.map": "/internship-interview-questions/static/js/runtime-main.d5258cea.js.map",
+    "main.js": "/internship-interview-questions/static/js/main.841dc946.chunk.js",
+    "main.js.map": "/internship-interview-questions/static/js/main.841dc946.chunk.js.map",
+    "runtime-main.js": "/internship-interview-questions/static/js/runtime-main.2782c144.js",
+    "runtime-main.js.map": "/internship-interview-questions/static/js/runtime-main.2782c144.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/internship-interview-questions/static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.f5dabd11.chunk.js": "/internship-interview-questions/static/js/2.f5dabd11.chunk.js",
-    "static/js/2.f5dabd11.chunk.js.map": "/internship-interview-questions/static/js/2.f5dabd11.chunk.js.map",
-    "static/js/3.2cfbbaf3.chunk.js": "/internship-interview-questions/static/js/3.2cfbbaf3.chunk.js",
-    "static/js/3.2cfbbaf3.chunk.js.map": "/internship-interview-questions/static/js/3.2cfbbaf3.chunk.js.map",
+    "static/js/2.cf073a57.chunk.js": "/internship-interview-questions/static/js/2.cf073a57.chunk.js",
+    "static/js/2.cf073a57.chunk.js.map": "/internship-interview-questions/static/js/2.cf073a57.chunk.js.map",
+    "static/js/3.c0ea47eb.chunk.js": "/internship-interview-questions/static/js/3.c0ea47eb.chunk.js",
+    "static/js/3.c0ea47eb.chunk.js.map": "/internship-interview-questions/static/js/3.c0ea47eb.chunk.js.map",
     "index.html": "/internship-interview-questions/index.html",
     "static/css/2.20aa2d7b.chunk.css.map": "/internship-interview-questions/static/css/2.20aa2d7b.chunk.css.map",
     "static/css/main.7c1376c5.chunk.css.map": "/internship-interview-questions/static/css/main.7c1376c5.chunk.css.map",
-    "static/js/2.f5dabd11.chunk.js.LICENSE.txt": "/internship-interview-questions/static/js/2.f5dabd11.chunk.js.LICENSE.txt"
+    "static/js/2.cf073a57.chunk.js.LICENSE.txt": "/internship-interview-questions/static/js/2.cf073a57.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d5258cea.js",
+    "static/js/runtime-main.2782c144.js",
     "static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.f5dabd11.chunk.js",
+    "static/js/2.cf073a57.chunk.js",
     "static/css/main.7c1376c5.chunk.css",
-    "static/js/main.a94e49b2.chunk.js"
+    "static/js/main.841dc946.chunk.js"
   ]
 }
