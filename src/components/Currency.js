@@ -35,13 +35,15 @@ function Currency({currentCurrency, chCurrency, currUnit}){
 
     if(loading){
         return (
-            <h2>loading currencies</h2>
+            <div class="dropdown">
+                <Button variant="success" class="dropbtn">{currentCurrency.toString().toUpperCase()}</Button>
+            </div>
         )
     }
 
     return (
             <div class="dropdown">
-                <Button class="dropbtn">{currentCurrency.toString().toUpperCase()}</Button>
+                <Button variant="success" class="dropbtn">{currentCurrency.toString().toUpperCase()}</Button>
                 <div class="dropdown-content">
                     <ul>Crypto</ul>
                     {currencyType("crypto")}

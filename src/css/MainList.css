@@ -3,3 +3,12 @@
 .pagination-bar{
     margin-left: 200px;
 }
+
+.menu-bar{
+    display: inline-flex;
+}
+
+.menu-bar .menu-item{
+    margin-right: 10px;
+    margin-bottom: 10px;
+}

@@ -1,4 +1,5 @@
-import { faAutoprefixer } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { Sparklines, SparklinesLine } from 'react-sparklines';
 import React from 'react';
 
@@ -60,7 +61,7 @@ function Posts({coins, loading, unit}){
             <tbody>
             {coins.map(coin => (
                 <tr>
-                    <td>fav</td>
+                    <td class="favStar"><FontAwesomeIcon icon={faStar} /></td>
                     <td>{coin.market_cap_rank}</td>
                     <td><img src={coin.image} className="coin-icon"/></td>
                     <td>{coin.name}</td>

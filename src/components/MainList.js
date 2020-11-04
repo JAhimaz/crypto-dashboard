@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Button } from 'react-bootstrap';
 import Coins from './Coins';
 import Pages from './Pages';
 import Currency from './Currency';
@@ -41,7 +42,10 @@ function MainList(){
 
     return(
       <div>
-            <Currency currentCurrency={currency} chCurrency={chCurrency} currUnit={currUnit}></Currency>
+            <nav className="menu-bar">
+                <div className="menu-item"><Currency currentCurrency={currency} chCurrency={chCurrency} currUnit={currUnit}></Currency></div>
+                <div className="menu-item"><Button variant="warning">Favourites</Button></div>
+            </nav>
             <Coins coins={coins} loading={loading} unit={unit} />
             <Pages coinsPerPage={coinsPerPage} totalPosts={coins.length} activePage={currentPage} paginate={paginate}/>
       </div>

@@ -23,7 +23,7 @@ tr {
 }
 
 th {
-    font-weight: 100;
+    font-weight: bold;
 }
 
 th, td{
@@ -32,6 +32,11 @@ th, td{
     color: var(--main-colour);
     border: none !important;
     font-family: var(--font);
+}
+
+.favStar:hover{
+    color: yellow;
+    cursor: pointer;
 }
 
 th.number, th.coin-image, th.coin, th.symbol, th.price{
