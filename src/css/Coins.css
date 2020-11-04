@@ -1,0 +1,64 @@
+@import "root.css";
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: none !important;
+}
+
+tr th {
+    border-bottom: 1px solid white !important;
+}
+
+th, td{
+    text-align: left;
+    padding: 8px;
+    color: white;
+    border: none !important;
+}
+
+tbody{
+    overflow-y: scroll;
+    border: none;
+}
+
+@media only screen and (min-width: 576px) {
+    .coins-list {
+        overflow: scroll;
+        overflow-x: hidden;
+        height: 65vh;
+    }
+}
+
+@media only screen and (min-width: 767px) {
+
+}
+
+@media only screen and (min-width: 992px) {
+    .coins-list {
+        overflow: scroll;
+        overflow-x: hidden;
+        height: 20vh;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .coins-list {
+        overflow: scroll;
+        overflow-x: hidden;
+        height: 20vh;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .coins-list {
+        overflow: scroll;
+        overflow-x: hidden;
+        height: 60vh;
+    }
+}
+
+@media only screen and (min-width: 3840px){
+
+}

@@ -1,9 +1,11 @@
+//Find better way to handling imports through modules
+
 import './css/App.css';
 import './css/Header.css';
-import './css/Footer.css';
 import './css/Dashboard.css';
+import './css/Coins.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
-import Footer from './components/Footer';
 import Dashboard from './components/Dashboard';
 
 function App() {
@@ -11,9 +13,7 @@ function App() {
     <div className="App">
       <Header />
       <Dashboard>
-
       </Dashboard>
-      <Footer/>
     </div>
   );
 }
