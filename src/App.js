@@ -5,6 +5,7 @@ import './css/Header.css';
 import './css/Dashboard.css';
 import './css/Coins.css';
 import './css/Pages.css';
+import './css/Currency.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
 import Dashboard from './components/Dashboard';

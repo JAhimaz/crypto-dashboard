@@ -41,7 +41,7 @@ function MainList(){
 
     return(
       <div>
-            <Currency chCurrency={chCurrency} currUnit={currUnit}></Currency>
+            <Currency currentCurrency={currency} chCurrency={chCurrency} currUnit={currUnit}></Currency>
             <Coins coins={coins} loading={loading} unit={unit} />
             <Pages coinsPerPage={coinsPerPage} totalPosts={coins.length} activePage={currentPage} paginate={paginate}/>
       </div>

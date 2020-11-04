@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { Button } from 'react-bootstrap';
 import axios from 'axios';
 
-function Currency({chCurrency, currUnit}){
+function Currency({currentCurrency, chCurrency, currUnit}){
 
     const[currencies, setCurrencies] = useState([]);
     const[loading, setLoading] = useState(false);
@@ -27,7 +28,7 @@ function Currency({chCurrency, currUnit}){
     const currencyType = (type) => mapObject(currencies, function (key, value){
         return (
             <div>
-                {value.type == type && <li><a onClick={() => onClickCurrency(key, value.unit)} className="" href="#!">{key} ({value.unit})</a></li>}
+                {value.type == type && <li><a onClick={() => onClickCurrency(key, value.unit)} className="" href="#!">{key.toString().toUpperCase()} ({value.unit})</a></li>}
             </div>
         )
     })
@@ -39,7 +40,8 @@ function Currency({chCurrency, currUnit}){
     }
 
     return (
-            <div>
+            <div class="dropdown">
+                <Button class="dropbtn">{currentCurrency.toString().toUpperCase()}</Button>
                 <p>Crypto</p>
                 {currencyType("crypto")}
                 <p>Fiat</p>
