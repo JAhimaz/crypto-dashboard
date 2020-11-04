@@ -5,25 +5,29 @@ import BootstrapTable from 'react-bootstrap-table-next';
 function Posts({coins, loading}){
 
     const columns = [{
-    dataField: 'market_cap_rank',
-    text: '#',
-    sort: true
+        dataField: 'market_cap_rank',
+        text: '#',
+        sort: true
     }, {
-    dataField: 'name',
-    text: 'Coin',
-    sort: true
+        dataField: 'name',
+        text: 'Coin',
+        sort: true
     }, {
-    dataField: 'symbol',
-    text: '',
-    sort: false
+        dataField: 'symbol',
+        text: '',
+        sort: false
     }, {
-    dataField: 'current_price',
-    text: 'Price',
-    sort: true
+        dataField: 'current_price',
+        text: 'Price',
+        sort: true
     }, {
-    dataField: 'total_volume',
-    text: '24h Volume',
-    sort: true
+        dataField: 'total_volume',
+        text: '24h Volume',
+        sort: true
+    }, {
+        dataField: `dsada`,
+        text: 'Last 7 Days',
+        sort: false
     }];
 
     const defaultSorted = [{
@@ -37,6 +41,7 @@ function Posts({coins, loading}){
     
     return (
         <BootstrapTable
+            className="react-bootstrap-table"
             keyField="id"
             data={ coins }
             columns={ columns }

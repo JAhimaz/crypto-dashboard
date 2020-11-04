@@ -3,8 +3,8 @@ import MainList from './MainList';
 
 function Dashboard(){
     return (
-        <Container fluid className="dashboard-container">
-            <MainList />
+        <Container fluid className="dashboard">
+            <MainList fluid/>
         </Container>
     );
 }

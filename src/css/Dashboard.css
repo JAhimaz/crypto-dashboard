@@ -1,16 +1,13 @@
 @import "root.css";
 
-.dashboard-container{
-    background-color: transparent;
-    border: 1px solid var(--main-colour);
-    height: 85vh;
-    overflow: hidden;
+.dashboard{
+    
 }
 
+
+
 @media only screen and (min-width: 576px) {
-    .dashboard-container{
-        height: 85vh;
-    }
+
 }
 
 @media only screen and (min-width: 767px) {
@@ -22,21 +19,15 @@
 }
 
 @media only screen and (min-width: 1200px) {
-    .dashboard-container{
-        height: 83vh;
-        margin: 0% 10%;
-        border-radius: 10px;
+    .dashboard{
+        padding: 0% 20% !important;
     }
 }
 
 @media only screen and (min-width: 1920px) {
-    .dashboard-container{
-        height: auto;
-    }
+
 }
 
 @media only screen and (min-width: 3840px){
-    .dashboard-container{
-        height: 93vh;
-    }
+
 }
