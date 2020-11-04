@@ -26,11 +26,11 @@ function Currency({currentCurrency, chCurrency, currUnit}){
     }
 
     const currencyType = (type) => mapObject(currencies, function (key, value){
-        return (
-            <div>
-                {value.type == type && <li><a onClick={() => onClickCurrency(key, value.unit)} className="" href="#!">{key.toString().toUpperCase()} ({value.unit})</a></li>}
-            </div>
-        )
+        if(value.type == type){
+            return(
+                <li><a onClick={() => onClickCurrency(key, value.unit)} className="" href="#!">{key.toString().toUpperCase()} ({value.unit})</a></li>
+            );
+        }
     })
 
     if(loading){
@@ -42,12 +42,14 @@ function Currency({currentCurrency, chCurrency, currUnit}){
     return (
             <div class="dropdown">
                 <Button class="dropbtn">{currentCurrency.toString().toUpperCase()}</Button>
-                <p>Crypto</p>
-                {currencyType("crypto")}
-                <p>Fiat</p>
-                {currencyType("fiat")}
-                <p>Commodity</p>
-                {currencyType("commodity")}
+                <div class="dropdown-content">
+                    <ul>Crypto</ul>
+                    {currencyType("crypto")}
+                    <ul>Fiat</ul>
+                    {currencyType("fiat")}
+                    <ul>Commodity</ul>
+                    {currencyType("commodity")}
+                </div>
             </div>
         );
 }
