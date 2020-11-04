@@ -1,7 +1,12 @@
 @import "root.css";
 
-.react-bootstrap-table{
+.reactive-table{
     overflow-x: auto !important;
+}
+
+.coin-icon{
+    width: 20px;
+    margin-right: 5px;
 }
 
 table{
@@ -10,6 +15,7 @@ table{
     width: 100%;
     border: none !important;
     border: none;
+    table-layout: fixed;
 }
 
 tr th {
@@ -23,10 +29,28 @@ th, td{
     border: none !important;
 }
 
+th.number{
+    width: 5%;
+}
+
+th.coin-image{
+    width: 3%;
+}
+
+th.coin{
+    width: 15%
+}
+
+th.symbol{
+    width: 25%;
+}
+
+th.price{
+    width: 15%;
+}
+
 @media only screen and (min-width: 576px) {
-    .coins-list {
-        height: 65vh;
-    }
+
 }
 
 @media only screen and (min-width: 767px) {
@@ -34,27 +58,15 @@ th, td{
 }
 
 @media only screen and (min-width: 992px) {
-    .coins-list {
-        overflow: scroll;
-        overflow-x: hidden;
-        height: 20vh;
-    }
+
 }
 
 @media only screen and (min-width: 1200px) {
-    .coins-list {
-        overflow: scroll;
-        overflow-x: hidden;
-        height: 20vh;
-    }
+
 }
 
 @media only screen and (min-width: 1920px) {
-    .coins-list {
-        overflow: scroll;
-        overflow-x: hidden;
-        height: 60vh;
-    }
+
 }
 
 @media only screen and (min-width: 3840px){
