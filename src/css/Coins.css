@@ -15,39 +15,29 @@ table{
     width: 100%;
     border: none !important;
     border: none;
-    table-layout: fixed;
 }
 
-tr th {
-    border-bottom: 1px solid white !important;
+tr {
+    border-top: 1px solid var(--main-colour) !important;
+    height: 6vh !important;
+}
+
+th {
+    font-weight: 100;
 }
 
 th, td{
     text-align: left;
     padding: 8px;
-    color: white;
+    color: var(--main-colour);
     border: none !important;
+    font-family: var(--font);
 }
 
-th.number{
-    width: 5%;
+th.number, th.coin-image, th.coin, th.symbol, th.price{
+    width: auto;
 }
 
-th.coin-image{
-    width: 3%;
-}
-
-th.coin{
-    width: 15%
-}
-
-th.symbol{
-    width: 25%;
-}
-
-th.price{
-    width: 15%;
-}
 
 @media only screen and (min-width: 576px) {
 
@@ -58,7 +48,29 @@ th.price{
 }
 
 @media only screen and (min-width: 992px) {
-
+    table{
+        table-layout: fixed;
+    }
+    
+    th.number{
+        width: 5%;
+    }
+    
+    th.coin-image{
+        width: 3%;
+    }
+    
+    th.coin{
+        width: 15%
+    }
+    
+    th.symbol{
+        width: 25%;
+    }
+    
+    th.price{
+        width: 15%;
+    }
 }
 
 @media only screen and (min-width: 1200px) {

@@ -1,6 +1,6 @@
 import { faAutoprefixer } from '@fortawesome/free-brands-svg-icons';
+import { Sparklines, SparklinesLine } from 'react-sparklines';
 import React from 'react';
-import BootstrapTable from 'react-bootstrap-table-next';
 
 function Posts({coins, loading}){
 
@@ -54,20 +54,21 @@ function Posts({coins, loading}){
                     <td>{coin.symbol}</td>
                     <td>{coin.current_price}</td>
                     <td>{coin.total_volume}</td>
-                    <td>Sparkline Goes Here</td>
+                    <td>        
+                        <Sparklines data={coin.sparkline_in_7d.price}>
+                            { coin.sparkline_in_7d.price[coin.sparkline_in_7d.price.length - 1] < coin.sparkline_in_7d.price[coin.sparkline_in_7d.price.length - 2] ? (
+                                <SparklinesLine color="red" />
+                            ):(
+                                <SparklinesLine color="green" />
+                            ) }
+                            
+                        </Sparklines>
+                    </td>
                 </tr>
             ))}
             </tbody>
         </table>
     </div>
-
-    // <ul className="coins-list">
-    //     {coins.map(coin => (
-    //         <li key={coin.id} className="coins-list-item">
-    //             {coin.name}
-    //         </li>
-    //     ))}
-    // </ul>
     );
 }
 

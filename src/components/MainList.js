@@ -35,8 +35,8 @@ function MainList(){
 
     return(
       <div>
-          <Coins coins={coins} loading={loading} />
-          <Pages coinsPerPage={coinsPerPage} totalPosts={coins.length} activePage={currentPage} paginate={paginate} />
+            <Coins coins={coins} loading={loading} />
+            <Pages coinsPerPage={coinsPerPage} totalPosts={coins.length} activePage={currentPage} paginate={paginate}/>
       </div>
     );
 }
