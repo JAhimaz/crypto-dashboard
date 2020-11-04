@@ -15,7 +15,7 @@ function Pages({ coinsPerPage, totalCoins, activePage, paginate }){
         <div className="pagination-bar">
             <Pagination>
                 {pageNumbers.map(number => (
-                    <Pagination.Item onClick={() => paginate(number)} href="!#" key={number} active={number === activePage}>
+                    <Pagination.Item onClick={() => paginate(number)} href="" key={number} active={number === activePage}>
                         <a>
                             {number}
                         </a>

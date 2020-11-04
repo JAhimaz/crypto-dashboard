@@ -4,11 +4,16 @@ import Coins from './Coins';
 import Pages from './Pages';
 import Currency from './Currency';
 import axios from 'axios';
+import { Link } from "react-router-dom";
+
 
 function MainList(){
 
+
     // Hooks
+    const[favPage, setIsFavPage] = useState(false);
     const[coins, setCoins] = useState([]);
+    const[favourites, setFavourites] = useState([]);
     const[loading, setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
     const [coinsPerPage, setCoinsPerPage] = useState(20);
@@ -16,6 +21,13 @@ function MainList(){
     const [unit, setUnit] = useState('$');
 
     useEffect(() => {
+
+        const getPage = () => {
+            if(window.location.pathname === "/favourites"){
+                setIsFavPage(true);
+            } 
+        }
+
         const fetchCoins = async () => {
             setLoading(true);
             let url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&order=market_cap_desc&per_page=${coinsPerPage}&page=${currentPage}&sparkline=true`;
@@ -23,10 +35,24 @@ function MainList(){
             setCoins(res.data);
             setLoading(false);
         }
-    
+
         fetchCoins();
+        getPage();
 
     }, [currentPage, currency]);
+
+    useEffect(() => {
+
+        let favourites = []
+        favourites = JSON.parse(sessionStorage.getItem("favourites"));
+        
+        //concantinate bitcoin%2Cethereum
+
+        const fetchFavourites = async () => {
+            const res = await axios.get(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&ids=${listOfFavourites}&order=market_cap_desc&per_page=${coinsPerPage}&page=${currentPage}&sparkline=true`);
+        }
+
+    }, [sessionStorage.getItem("favourites")]);
 
     //Change Page
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -44,9 +70,10 @@ function MainList(){
       <div>
             <nav className="menu-bar">
                 <div className="menu-item"><Currency currentCurrency={currency} chCurrency={chCurrency} currUnit={currUnit}></Currency></div>
-                <div className="menu-item"><Button variant="warning">Favourites</Button></div>
+                <div className="menu-item"><Link to="/favourites"><Button variant="warning">Favourites</Button></Link></div>
+                {favPage && <div className="menu-item"><Link to="/"><Button variant="danger">Back To Home</Button></Link></div>}
             </nav>
-            <Coins coins={coins} loading={loading} unit={unit} />
+            <Coins coins={coins} loading={loading} unit={unit} isFavourite={favPage}/>
             <Pages coinsPerPage={coinsPerPage} totalPosts={coins.length} activePage={currentPage} paginate={paginate}/>
       </div>
     );

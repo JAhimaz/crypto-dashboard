@@ -3,7 +3,20 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { Sparklines, SparklinesLine } from 'react-sparklines';
 import React from 'react';
 
-function Posts({coins, loading, unit}){
+function Posts({coins, loading, unit, isFavourite, favourites}){
+
+    const removeFromFavourites = (coinName) => {
+        let favourites = [];
+        favourites = JSON.parse(sessionStorage.getItem("favourites"));
+        favourites.removeFromFavourites(coinName)
+    }
+
+    const addToFavourites = (coinName) => {
+        let favourites = [];
+        favourites = JSON.parse(sessionStorage.getItem("favourites"));
+        favourites.push(coinName);
+        sessionStorage.setItem("favourites", JSON.stringify(favourites));
+    }
 
     const numberWithCommas = (x) => {
         if(x <= 1){
@@ -61,9 +74,9 @@ function Posts({coins, loading, unit}){
             <tbody>
             {coins.map(coin => (
                 <tr>
-                    <td class="favStar"><FontAwesomeIcon icon={faStar} /></td>
+                    <td className="favStar"><a href="#"><FontAwesomeIcon icon={faStar}/></a></td>
                     <td>{coin.market_cap_rank}</td>
-                    <td><img src={coin.image} className="coin-icon"/></td>
+                    <td><img alt={coin.name} src={coin.image} className="coin-icon"/></td>
                     <td>{coin.name}</td>
                     <td>{coin.symbol}</td>
                     <td>{unit} {numberWithCommas(coin.current_price)}</td>
@@ -75,7 +88,6 @@ function Posts({coins, loading, unit}){
                             ):(
                                 <SparklinesLine color="green" />
                             ) }
-                            
                         </Sparklines>
                     </td>
                 </tr>
