@@ -34,7 +34,12 @@ th, td{
     font-family: var(--font);
 }
 
-.favStar:hover{
+.favStar{
+    text-decoration: none;
+    color: var(--main-colour);
+}
+
+.favStar:hover, .favStarSelected{
     color: yellow;
     cursor: pointer;
 }
