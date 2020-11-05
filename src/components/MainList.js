@@ -21,9 +21,8 @@ function MainList(){
     const [unit, setUnit] = useState('$');
 
     useEffect(() => {
-
         const getPage = () => {
-            console.log(window.location.pathname);
+            //Proper path handling can be done with routing and passing down through components by accessing the props
             if(window.location.pathname === "/internship-interview-questions/favourites"){
                 setIsFavPage(true);
             } 

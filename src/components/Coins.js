@@ -11,7 +11,7 @@ function Posts({coins, loading, unit, isFavourite, currency, coinsPerPage, curre
 
     useEffect(() => {
         const fetchFavourites = async () => {
-            let favourites = []
+            let favourites = [];
             favourites = JSON.parse(sessionStorage.getItem("favourites"));
             if(favourites.length > 0){
                 let listOfFavourites = favourites.join("%2C");
@@ -22,7 +22,11 @@ function Posts({coins, loading, unit, isFavourite, currency, coinsPerPage, curre
             }
         }
 
-        fetchFavourites();
+        //This is only used because it's using session variable, it is not neccessary if proper favourite handling
+        //is used
+        if(JSON.parse(sessionStorage.getItem("favourites")) !== null){
+            fetchFavourites();
+        }
 
     }, [favourites]);
 
@@ -112,9 +116,9 @@ function Posts({coins, loading, unit, isFavourite, currency, coinsPerPage, curre
                     favCoins.map(coin => (
                         <tr>
                             {(JSON.parse(sessionStorage.getItem("favourites"))).includes(coin.id) ? (
-                                <td><a href="#" className="favStarSelected" onClick={() => removeFromFavourites(coin.id)}><FontAwesomeIcon icon={faStar}/></a></td>
+                                <td><a className="favStarSelected" onClick={() => removeFromFavourites(coin.id)}><FontAwesomeIcon icon={faStar}/></a></td>
                             ) : (
-                                <td><a href="#" className="favStar" onClick={() => addToFavourites(coin.id)}><FontAwesomeIcon icon={faStar}/></a></td>
+                                <td><a className="favStar" onClick={() => addToFavourites(coin.id)}><FontAwesomeIcon icon={faStar}/></a></td>
                             )}
                             <td>{coin.market_cap_rank}</td>
                             <td><img alt={coin.name} src={coin.image} className="coin-icon"/></td>
@@ -138,9 +142,9 @@ function Posts({coins, loading, unit, isFavourite, currency, coinsPerPage, curre
                 coins.map(coin => (
                     <tr>
                         {JSON.parse(sessionStorage.getItem("favourites")) && (JSON.parse(sessionStorage.getItem("favourites"))).includes(coin.id) ? (
-                            <td><a href="#" className="favStarSelected" onClick={() => removeFromFavourites(coin.id)}><FontAwesomeIcon icon={faStar}/></a></td>
+                            <td><a className="favStarSelected" onClick={() => removeFromFavourites(coin.id)}><FontAwesomeIcon icon={faStar}/></a></td>
                         ) : (
-                            <td><a href="#" className="favStar" onClick={() => addToFavourites(coin.id)}><FontAwesomeIcon icon={faStar}/></a></td>
+                            <td><a className="favStar" onClick={() => addToFavourites(coin.id)}><FontAwesomeIcon icon={faStar}/></a></td>
                         )}
                         
                         <td>{coin.market_cap_rank}</td>

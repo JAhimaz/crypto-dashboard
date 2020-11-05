@@ -14,7 +14,7 @@ import React from "react";
 // import Dashboard from './components/Dashboard';
 
 //Routing
-import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 //Pages
 import MainPage from "./pages/index";
