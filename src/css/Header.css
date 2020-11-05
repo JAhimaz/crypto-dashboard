@@ -3,12 +3,19 @@
 .header-title {
     color: var(--main-colour);
     font-family: var(--font);
-    padding: 10px 0px;
-    padding-left: 30px !important;
+    padding: 10px 10px;
+    text-align: center;
 }
 
 .title {
     text-decoration: none;
     color: var(--main-colour);
+}
+
+@media only screen and (min-width: 992px) {
+    .header-title {
+        padding-left: 30px !important;
+        text-align: left;
+    }
 }
 
