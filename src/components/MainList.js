@@ -80,7 +80,7 @@ function MainList(){
                 )}
             </nav>
             <Coins coins={coins} loading={loading} unit={unit} isFavourite={favPage} currency={currency} coinsPerPage={coinsPerPage} currentPage={currentPage}/>
-            <Pages coinsPerPage={coinsPerPage} totalPosts={coins.length} activePage={currentPage} paginate={paginate}/>
+            <Pages coinsPerPage={coinsPerPage} totalCoins={coins.length} activePage={currentPage} paginate={paginate}/>
       </div>
     );
 }

@@ -4,7 +4,7 @@ import { Sparklines, SparklinesLine } from 'react-sparklines';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-function Posts({coins, loading, unit, isFavourite, currency, coinsPerPage, currentPage}){
+function Coins({coins, loading, unit, isFavourite, currency, coinsPerPage, currentPage}){
 
     const [favourites, setFavourites] = useState([]);
     const [favCoins, setFavCoins] = useState([]);
@@ -173,4 +173,4 @@ function Posts({coins, loading, unit, isFavourite, currency, coinsPerPage, curre
 
 
 
-export default Posts;
+export default Coins;
