@@ -3,11 +3,15 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 400px;
+    background-color: var(--bg-colour);
+    min-width: 600px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 100;
     font-family: var(--font);
+}
+
+.dropdown-content a {
+    color: var(--main-colour);
 }
 
 
@@ -19,8 +23,23 @@
     display: inline-block;
 }
 
+.dropdown-content ul {
+    color: var(--main-colour);
+    padding-left: 15px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+}
+
+.dropbtn{
+    font-family: var(--font);
+}
+
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
   
+.currency-items {
+
+}

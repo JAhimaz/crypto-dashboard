@@ -110,7 +110,7 @@ function Posts({coins, loading, unit, isFavourite, currency, coinsPerPage, curre
                         <td>{coin.market_cap_rank}</td>
                         <td><img alt={coin.name} src={coin.image} className="coin-icon"/></td>
                         <td>{coin.name}</td>
-                        <td>{coin.symbol}</td>
+                        <td>{coin.symbol.toString().toUpperCase()}</td>
                         <td>{unit} {numberWithCommas(coin.current_price)}</td>
                         <td>{unit} {numberWithCommas(coin.total_volume)}</td>
                         <td>        

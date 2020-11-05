@@ -3,3 +3,11 @@
     --bg-colour: #282c34;
     --font: Consolas, "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
 }
+
+a {
+    font-family: var(--font);
+}
+
+p {
+    font-family: var(--font);
+}

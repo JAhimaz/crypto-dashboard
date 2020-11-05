@@ -6,3 +6,9 @@
     padding: 10px 0px;
     padding-left: 30px !important;
 }
+
+.title {
+    text-decoration: none;
+    color: var(--main-colour);
+}
+
