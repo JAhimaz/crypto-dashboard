@@ -17,6 +17,11 @@ table{
     border: none;
 }
 
+.no-favourites{
+    color: white;
+    display: block;
+}
+
 tr {
     border-top: 1px solid var(--main-colour) !important;
     height: 6vh !important;

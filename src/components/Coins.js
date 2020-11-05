@@ -13,10 +13,12 @@ function Posts({coins, loading, unit, isFavourite, currency, coinsPerPage, curre
         const fetchFavourites = async () => {
             let favourites = []
             favourites = JSON.parse(sessionStorage.getItem("favourites"));
-            if(favourites){
+            if(favourites.length > 0){
                 let listOfFavourites = favourites.join("%2C");
                     const res = await axios.get(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&ids=${listOfFavourites}&order=market_cap_desc&per_page=${coinsPerPage}&page=${currentPage}&sparkline=true`);
                     setFavCoins(res.data);
+            }else{
+                setFavCoins([]);
             }
         }
 
@@ -98,7 +100,41 @@ function Posts({coins, loading, unit, isFavourite, currency, coinsPerPage, curre
                 <th className="Sparkline">Last 7 Days</th>
             </tr>
             <tbody>
-            {!isFavourite ? (
+            {isFavourite ? (
+                favCoins.length == 0 ? (
+                    <tr>
+                        <td></td>
+                        <td>#</td>
+                        <td></td>
+                        <td>No Favourites</td>
+                    </tr>
+                ) : (
+                    favCoins.map(coin => (
+                        <tr>
+                            {(JSON.parse(sessionStorage.getItem("favourites"))).includes(coin.id) ? (
+                                <td><a href="#" className="favStarSelected" onClick={() => removeFromFavourites(coin.id)}><FontAwesomeIcon icon={faStar}/></a></td>
+                            ) : (
+                                <td><a href="#" className="favStar" onClick={() => addToFavourites(coin.id)}><FontAwesomeIcon icon={faStar}/></a></td>
+                            )}
+                            <td>{coin.market_cap_rank}</td>
+                            <td><img alt={coin.name} src={coin.image} className="coin-icon"/></td>
+                            <td>{coin.name}</td>
+                            <td>{coin.symbol}</td>
+                            <td>{unit} {numberWithCommas(coin.current_price)}</td>
+                            <td>{unit} {numberWithCommas(coin.total_volume)}</td>
+                            <td>        
+                                <Sparklines data={coin.sparkline_in_7d.price}>
+                                    { coin.sparkline_in_7d.price[coin.sparkline_in_7d.price.length - 1] < coin.sparkline_in_7d.price[coin.sparkline_in_7d.price.length - 2] ? (
+                                        <SparklinesLine color="red" />
+                                    ):(
+                                        <SparklinesLine color="green" />
+                                    ) }
+                                </Sparklines>
+                            </td>
+                        </tr>
+                    ))
+                ) 
+            ) : (
                 coins.map(coin => (
                     <tr>
                         {JSON.parse(sessionStorage.getItem("favourites")) && (JSON.parse(sessionStorage.getItem("favourites"))).includes(coin.id) ? (
@@ -111,32 +147,6 @@ function Posts({coins, loading, unit, isFavourite, currency, coinsPerPage, curre
                         <td><img alt={coin.name} src={coin.image} className="coin-icon"/></td>
                         <td>{coin.name}</td>
                         <td>{coin.symbol.toString().toUpperCase()}</td>
-                        <td>{unit} {numberWithCommas(coin.current_price)}</td>
-                        <td>{unit} {numberWithCommas(coin.total_volume)}</td>
-                        <td>        
-                            <Sparklines data={coin.sparkline_in_7d.price}>
-                                { coin.sparkline_in_7d.price[coin.sparkline_in_7d.price.length - 1] < coin.sparkline_in_7d.price[coin.sparkline_in_7d.price.length - 2] ? (
-                                    <SparklinesLine color="red" />
-                                ):(
-                                    <SparklinesLine color="green" />
-                                ) }
-                            </Sparklines>
-                        </td>
-                    </tr>
-                ))
-            ) : (
-                favCoins.map(coin => (
-                    <tr>
-                        {(JSON.parse(sessionStorage.getItem("favourites"))).includes(coin.id) ? (
-                            <td><a href="#" className="favStarSelected" onClick={() => removeFromFavourites(coin.id)}><FontAwesomeIcon icon={faStar}/></a></td>
-                        ) : (
-                            <td><a href="#" className="favStar" onClick={() => addToFavourites(coin.id)}><FontAwesomeIcon icon={faStar}/></a></td>
-                        )}
-                        
-                        <td>{coin.market_cap_rank}</td>
-                        <td><img alt={coin.name} src={coin.image} className="coin-icon"/></td>
-                        <td>{coin.name}</td>
-                        <td>{coin.symbol}</td>
                         <td>{unit} {numberWithCommas(coin.current_price)}</td>
                         <td>{unit} {numberWithCommas(coin.total_volume)}</td>
                         <td>        
