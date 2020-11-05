@@ -14,7 +14,7 @@ import React from "react";
 // import Dashboard from './components/Dashboard';
 
 //Routing
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 
 //Pages
 import MainPage from "./pages/index";
@@ -26,7 +26,7 @@ function App() {
       <Switch>
         <Route exact path="/internship-interview-questions/favourites" component={Favourites} />
         <Route path="/internship-interview-questions/" component={MainPage} />
-        {/* <Redirect to="/internship-interview-questions" /> */}
+        <Redirect to="/internship-interview-questions/" />
         {/* REDIRECT TO 404 */}
       </Switch>
      
