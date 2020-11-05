@@ -1,5 +1,5 @@
 //Find better way to handling imports through modules
-import React, { Component } from "react";
+import React from "react";
 
 
 // import './css/App.css';
@@ -14,7 +14,7 @@ import React, { Component } from "react";
 // import Dashboard from './components/Dashboard';
 
 //Routing
-import { BrowserRouter as Router, Route, Switch, Link, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 
 //Pages
 import MainPage from "./pages/index";
@@ -24,9 +24,10 @@ function App() {
     return( 
     <Router>
       <Switch>
-        <Route exact path="/" component={MainPage} />
-        <Route exact path="/favourites" component={Favourites} />
-        <Redirect to="/" />
+        <Route exact path="/internship-interview-questions/favourites" component={Favourites} />
+        <Route path="/internship-interview-questions/" component={MainPage} />
+        {/* <Redirect to="/internship-interview-questions" /> */}
+        {/* REDIRECT TO 404 */}
       </Switch>
      
     </Router>

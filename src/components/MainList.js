@@ -23,7 +23,8 @@ function MainList(){
     useEffect(() => {
 
         const getPage = () => {
-            if(window.location.pathname === "/favourites"){
+            console.log(window.location.pathname);
+            if(window.location.pathname === "/internship-interview-questions/favourites"){
                 setIsFavPage(true);
             } 
         }
@@ -68,15 +69,15 @@ function MainList(){
     // const indexOfLastCoin = currentPage * coinsPerPage;
     // const indexOfFirstCoin = indexOfLastCoin - coinsPerPage;
     // const currentCoins = coins.slice(indexOfFirstCoin, indexOfLastCoin);
-
+    
     return(
       <div>
             <nav className="menu-bar">
                 <div className="menu-item"><Currency currentCurrency={currency} chCurrency={chCurrency} currUnit={currUnit}></Currency></div> 
                 {favPage ? (
-                    <div className="menu-item"><Link to="/"><Button variant="danger">Back To Home</Button></Link></div>
+                    <div className="menu-item"><Link to="/internship-interview-questions/"><Button variant="danger">Back To Home</Button></Link></div>
                 ) : (
-                    <div className="menu-item"><Link to="/favourites"><Button variant="warning">Favourites</Button></Link></div>
+                    <div className="menu-item"><Link to="/internship-interview-questions/favourites"><Button variant="warning">Favourites</Button></Link></div>
                 )}
             </nav>
             <Coins coins={coins} loading={loading} unit={unit} isFavourite={favPage} currency={currency} coinsPerPage={coinsPerPage} currentPage={currentPage}/>

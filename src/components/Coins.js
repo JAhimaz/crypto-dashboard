@@ -8,7 +8,6 @@ function Posts({coins, loading, unit, isFavourite, currency, coinsPerPage, curre
 
     const [favourites, setFavourites] = useState([]);
     const [favCoins, setFavCoins] = useState([]);
-    const [favLoading, setFavLoading] = useState(false);
 
     useEffect(() => {
         const fetchFavourites = async () => {
@@ -18,7 +17,6 @@ function Posts({coins, loading, unit, isFavourite, currency, coinsPerPage, curre
                 let listOfFavourites = favourites.join("%2C");
                     const res = await axios.get(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&ids=${listOfFavourites}&order=market_cap_desc&per_page=${coinsPerPage}&page=${currentPage}&sparkline=true`);
                     setFavCoins(res.data);
-                    setFavLoading(true);
             }
         }
 
@@ -36,7 +34,9 @@ function Posts({coins, loading, unit, isFavourite, currency, coinsPerPage, curre
 
     const addToFavourites = (coinName) => {
         let tempFav = []
-        tempFav = JSON.parse(sessionStorage.getItem("favourites"));
+        if(JSON.parse(sessionStorage.getItem("favourites"))){
+            tempFav = JSON.parse(sessionStorage.getItem("favourites"));
+        }
         tempFav.push(coinName);
         setFavourites(tempFav);
         sessionStorage.setItem("favourites", JSON.stringify(tempFav));
@@ -101,7 +101,7 @@ function Posts({coins, loading, unit, isFavourite, currency, coinsPerPage, curre
             {!isFavourite ? (
                 coins.map(coin => (
                     <tr>
-                        {(JSON.parse(sessionStorage.getItem("favourites"))).includes(coin.id) ? (
+                        {JSON.parse(sessionStorage.getItem("favourites")) && (JSON.parse(sessionStorage.getItem("favourites"))).includes(coin.id) ? (
                             <td><a href="#" className="favStarSelected" onClick={() => removeFromFavourites(coin.id)}><FontAwesomeIcon icon={faStar}/></a></td>
                         ) : (
                             <td><a href="#" className="favStar" onClick={() => addToFavourites(coin.id)}><FontAwesomeIcon icon={faStar}/></a></td>
