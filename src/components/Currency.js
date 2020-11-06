@@ -28,7 +28,7 @@ function Currency({currentCurrency, chCurrency, currUnit}){
     const currencyType = (type) => mapObject(currencies, function (key, value){
         if(value.type === type){
             return(
-                <li><a onClick={() => onClickCurrency(key, value.unit)} className="currency-items" href="#">{key.toString().toUpperCase()} ({value.unit})</a></li>
+                <li key={key.toString()}><a onClick={() => onClickCurrency(key, value.unit)} className="currency-items" href="#">{key.toString().toUpperCase()} ({value.unit})</a></li>
             );
         }
     })

@@ -19,12 +19,14 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-d
 //Pages
 import MainPage from "./pages/index";
 import Favourites from "./pages/favourites";
+import CoinPage from "./pages/coinpage";
 
 function App() {
     return( 
     <Router>
       <Switch>
         <Route exact path="/internship-interview-questions/favourites" component={Favourites} />
+        <Route exact path="/internship-interview-questions/:coin" name="coin" component={CoinPage} />
         <Route path="/internship-interview-questions/" component={MainPage} />
         <Redirect to="/internship-interview-questions/" />
         {/* REDIRECT TO 404 */}

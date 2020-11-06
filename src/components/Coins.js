@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { Sparklines, SparklinesLine } from 'react-sparklines';
 import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 import axios from 'axios';
 
 function Coins({coins, loading, unit, isFavourite, currency, coinsPerPage, currentPage}){
@@ -104,8 +105,11 @@ function Coins({coins, loading, unit, isFavourite, currency, coinsPerPage, curre
                 <th className="Sparkline">Last 7 Days</th>
             </tr>
             <tbody>
+
+            {/* This Section Can be put into a proper function to reduce and clean code as alot of the lines repeat*/}
+
             {isFavourite ? (
-                favCoins.length == 0 ? (
+                favCoins.length === 0 ? (
                     <tr>
                         <td></td>
                         <td>#</td>
@@ -122,7 +126,7 @@ function Coins({coins, loading, unit, isFavourite, currency, coinsPerPage, curre
                             )}
                             <td>{coin.market_cap_rank}</td>
                             <td><img alt={coin.name} src={coin.image} className="coin-icon"/></td>
-                            <td>{coin.name}</td>
+                            <td><Link to={{pathname: `/internship-interview-questions/${coin.name}`}}>{coin.name}</Link></td>
                             <td>{coin.symbol}</td>
                             <td>{unit} {numberWithCommas(coin.current_price)}</td>
                             <td>{unit} {numberWithCommas(coin.total_volume)}</td>
@@ -149,7 +153,7 @@ function Coins({coins, loading, unit, isFavourite, currency, coinsPerPage, curre
                         
                         <td>{coin.market_cap_rank}</td>
                         <td><img alt={coin.name} src={coin.image} className="coin-icon"/></td>
-                        <td>{coin.name}</td>
+                        <td><Link to={{pathname: `/internship-interview-questions/${coin.name}`, state: { coinId: coin.id}}}>{coin.name}</Link></td>
                         <td>{coin.symbol.toString().toUpperCase()}</td>
                         <td>{unit} {numberWithCommas(coin.current_price)}</td>
                         <td>{unit} {numberWithCommas(coin.total_volume)}</td>
@@ -170,6 +174,7 @@ function Coins({coins, loading, unit, isFavourite, currency, coinsPerPage, curre
     </div>
     );
 }
+
 
 
 
