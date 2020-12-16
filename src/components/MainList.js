@@ -23,7 +23,7 @@ function MainList(){
     useEffect(() => {
         const getPage = () => {
             //Proper path handling can be done with routing and passing down through components by accessing the props
-            if(window.location.pathname === "/internship-interview-questions/favourites"){
+            if(window.location.pathname === "/crypto-dashboard/favourites"){
                 setIsFavPage(true);
             } 
         }
@@ -74,9 +74,9 @@ function MainList(){
             <nav className="menu-bar">
                 <div className="menu-item"><Currency currentCurrency={currency} chCurrency={chCurrency} currUnit={currUnit}></Currency></div> 
                 {favPage ? (
-                    <div className="menu-item"><Link to="/internship-interview-questions/"><Button variant="danger">Back To Home</Button></Link></div>
+                    <div className="menu-item"><Link to="/crypto-dashboard/"><Button variant="danger">Back To Home</Button></Link></div>
                 ) : (
-                    <div className="menu-item"><Link to="/internship-interview-questions/favourites"><Button variant="warning">Favourites</Button></Link></div>
+                    <div className="menu-item"><Link to="/crypto-dashboard/favourites"><Button variant="warning">Favourites</Button></Link></div>
                 )}
             </nav>
             <Coins coins={coins} loading={loading} unit={unit} isFavourite={favPage} currency={currency} coinsPerPage={coinsPerPage} currentPage={currentPage}/>

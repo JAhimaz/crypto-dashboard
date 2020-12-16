@@ -25,10 +25,10 @@ function App() {
     return( 
     <Router>
       <Switch>
-        <Route exact path="/internship-interview-questions/favourites" component={Favourites} />
-        <Route exact path="/internship-interview-questions/:coin" name="coin" component={CoinPage} />
-        <Route path="/internship-interview-questions/" component={MainPage} />
-        <Redirect to="/internship-interview-questions/" />
+        <Route exact path="/crypto-dashboard/favourites" component={Favourites} />
+        <Route exact path="/crypto-dashboard/:coin" name="coin" component={CoinPage} />
+        <Route path="/crypto-dashboard/" component={MainPage} />
+        <Redirect to="/crypto-dashboard/" />
         {/* REDIRECT TO 404 */}
       </Switch>
      

@@ -126,7 +126,7 @@ function Coins({coins, loading, unit, isFavourite, currency, coinsPerPage, curre
                             )}
                             <td>{coin.market_cap_rank}</td>
                             <td><img alt={coin.name} src={coin.image} className="coin-icon"/></td>
-                            <td><Link to={{pathname: `/internship-interview-questions/${coin.name}`}}>{coin.name}</Link></td>
+                            <td><Link to={{pathname: `/crypto-dashboard/${coin.name}`}}>{coin.name}</Link></td>
                             <td>{coin.symbol}</td>
                             <td>{unit} {numberWithCommas(coin.current_price)}</td>
                             <td>{unit} {numberWithCommas(coin.total_volume)}</td>
@@ -153,7 +153,7 @@ function Coins({coins, loading, unit, isFavourite, currency, coinsPerPage, curre
                         
                         <td>{coin.market_cap_rank}</td>
                         <td><img alt={coin.name} src={coin.image} className="coin-icon"/></td>
-                        <td><Link to={{pathname: `/internship-interview-questions/${coin.name}`, state: { coinId: coin.id}}}>{coin.name}</Link></td>
+                        <td><Link to={{pathname: `/crypto-dashboard/${coin.name}`, state: { coinId: coin.id}}}>{coin.name}</Link></td>
                         <td>{coin.symbol.toString().toUpperCase()}</td>
                         <td>{unit} {numberWithCommas(coin.current_price)}</td>
                         <td>{unit} {numberWithCommas(coin.total_volume)}</td>
