@@ -1,7 +1,10 @@
 # Crypto Dashboard
 
+The **Dashboard** can be viewed here: 
+https://jahimaz.github.io/crypto-dashboard/
+
 - Using API endpoints from https://www.coingecko.com/en/api.
-- Displays Coins current prices, as well as a 7 day data sparkline.
+- Displays coins current prices, as well as a 7 day data sparkline.
 - Allows you to favourite coins and view them seperately.
 - Optimised for mobile view.
 
