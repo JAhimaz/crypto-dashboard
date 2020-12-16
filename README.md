@@ -1,7 +1,7 @@
 # Crypto Dashboard
 
 The **Dashboard** can be viewed here: 
-https://jahimaz.github.io/crypto-dashboard/
+[Crypto-currency Dashboard](https://jahimaz.github.io/crypto-dashboard/)
 
 - Using API endpoints from https://www.coingecko.com/en/api.
 - Displays coins current prices, as well as a 7 day data sparkline.
