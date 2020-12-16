@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/internship-interview-questions/static/css/main.3909e3ed.chunk.css",
-    "main.js": "/internship-interview-questions/static/js/main.5a53a631.chunk.js",
-    "main.js.map": "/internship-interview-questions/static/js/main.5a53a631.chunk.js.map",
-    "runtime-main.js": "/internship-interview-questions/static/js/runtime-main.9cc58f61.js",
-    "runtime-main.js.map": "/internship-interview-questions/static/js/runtime-main.9cc58f61.js.map",
-    "static/css/2.20aa2d7b.chunk.css": "/internship-interview-questions/static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.5e708e3c.chunk.js": "/internship-interview-questions/static/js/2.5e708e3c.chunk.js",
-    "static/js/2.5e708e3c.chunk.js.map": "/internship-interview-questions/static/js/2.5e708e3c.chunk.js.map",
-    "static/js/3.d76ced9d.chunk.js": "/internship-interview-questions/static/js/3.d76ced9d.chunk.js",
-    "static/js/3.d76ced9d.chunk.js.map": "/internship-interview-questions/static/js/3.d76ced9d.chunk.js.map",
-    "index.html": "/internship-interview-questions/index.html",
-    "static/css/2.20aa2d7b.chunk.css.map": "/internship-interview-questions/static/css/2.20aa2d7b.chunk.css.map",
-    "static/css/main.3909e3ed.chunk.css.map": "/internship-interview-questions/static/css/main.3909e3ed.chunk.css.map",
-    "static/js/2.5e708e3c.chunk.js.LICENSE.txt": "/internship-interview-questions/static/js/2.5e708e3c.chunk.js.LICENSE.txt"
+    "main.css": "/crypto-dashboard/static/css/main.3909e3ed.chunk.css",
+    "main.js": "/crypto-dashboard/static/js/main.b2d990b4.chunk.js",
+    "main.js.map": "/crypto-dashboard/static/js/main.b2d990b4.chunk.js.map",
+    "runtime-main.js": "/crypto-dashboard/static/js/runtime-main.10402b2b.js",
+    "runtime-main.js.map": "/crypto-dashboard/static/js/runtime-main.10402b2b.js.map",
+    "static/css/2.20aa2d7b.chunk.css": "/crypto-dashboard/static/css/2.20aa2d7b.chunk.css",
+    "static/js/2.beabb0fa.chunk.js": "/crypto-dashboard/static/js/2.beabb0fa.chunk.js",
+    "static/js/2.beabb0fa.chunk.js.map": "/crypto-dashboard/static/js/2.beabb0fa.chunk.js.map",
+    "static/js/3.d76ced9d.chunk.js": "/crypto-dashboard/static/js/3.d76ced9d.chunk.js",
+    "static/js/3.d76ced9d.chunk.js.map": "/crypto-dashboard/static/js/3.d76ced9d.chunk.js.map",
+    "index.html": "/crypto-dashboard/index.html",
+    "static/css/2.20aa2d7b.chunk.css.map": "/crypto-dashboard/static/css/2.20aa2d7b.chunk.css.map",
+    "static/css/main.3909e3ed.chunk.css.map": "/crypto-dashboard/static/css/main.3909e3ed.chunk.css.map",
+    "static/js/2.beabb0fa.chunk.js.LICENSE.txt": "/crypto-dashboard/static/js/2.beabb0fa.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.9cc58f61.js",
+    "static/js/runtime-main.10402b2b.js",
     "static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.5e708e3c.chunk.js",
+    "static/js/2.beabb0fa.chunk.js",
     "static/css/main.3909e3ed.chunk.css",
-    "static/js/main.5a53a631.chunk.js"
+    "static/js/main.b2d990b4.chunk.js"
   ]
 }
