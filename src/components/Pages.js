@@ -4,7 +4,7 @@ import PageItem from 'react-bootstrap/PageItem'
 
 function Pages({ coinsPerPage, totalCoins, activePage, paginate }){
     // Hard coded for 5 Pages of Coins (This will affect the favourites page as there is no calculation being done for the total number of coins)
-    const pageNumbers = [1, 2, 3, 4, 5];
+    const pageNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
     // Caculate how many pages required depending on the total number of coins
     // for (let i = 1; i <= Math.ceil(totalCoins / coinsPerPage); i++){

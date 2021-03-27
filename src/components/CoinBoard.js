@@ -1,6 +1,7 @@
 import { Sparklines, SparklinesLine } from 'react-sparklines';
 import React, { useState, useEffect } from 'react';
 import { useLocation, Link } from "react-router-dom";
+import { Col, Row } from 'react-bootstrap';
 import axios from 'axios';
 
 
@@ -21,12 +22,12 @@ function CoinBoard(){
                 let url = `https://api.coingecko.com/api/v3/coins/${coinId}?market_data=true&sparkline=true`;
                 const res = await axios.get(url);
                 setCoin(res.data);
+                console.log(res.data);
                 setLoading(false);
             }
         }
 
         fetchCoin();
-
     }, []);
 
     if(loading){
@@ -35,8 +36,19 @@ function CoinBoard(){
         )
     }else{
         return (
-            <div>
-                <h2>{coin.name} {coin.id} {coin.hashing_algoritm} {coin.symbol} {coin.market_cap_rank}</h2>
+            <div className="pageColumn">
+                <Row>
+                    <Col xs={6}>
+                    <Sparklines data={coin.market_data.sparkline_7d.price}>
+                    { coin.market_data.sparkline_7d.price[coin.market_data.sparkline_7d.price.length - 1] < coin.market_data.sparkline_7d.price[coin.market_data.sparkline_7d.price.length - 2] ? (
+                        <SparklinesLine color="red" />
+                    ):(
+                        <SparklinesLine color="green" />
+                    ) }
+                </Sparklines>
+                    </Col>
+                </Row>
+                <h2>{coin.name} {coin.id} {coin.symbol} {coin.market_cap_rank}</h2>
                 <img src={coin.image.large} alt={coin.name} />
             </div>
         );

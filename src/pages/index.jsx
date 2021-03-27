@@ -7,6 +7,7 @@ import '../css/Coins.css';
 import '../css/Pages.css';
 import '../css/Currency.css';
 import '../css/MainList.css';
+import '../css/CoinBoard.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Dashboard from '../components/Dashboard';
 import Header from '../components/Header';
