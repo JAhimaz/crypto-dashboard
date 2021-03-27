@@ -1,5 +1,7 @@
 # Crypto Dashboard
 
+![preview](https://github.com/JAhimaz/crypto-dashboard/blob/Assessment/images/preview.png)
+
 The **Dashboard** can be viewed here: 
 [Crypto-currency Dashboard](https://jahimaz.github.io/crypto-dashboard/)
 
