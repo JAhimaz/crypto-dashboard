@@ -1,5 +1,7 @@
 # Crypto Dashboard
 
+![Project Status](https://img.shields.io/badge/Project%20Status-Complete-green?style=for-the-badge&logo=github)
+
 ![preview](https://github.com/JAhimaz/crypto-dashboard/blob/Assessment/images/preview.png)
 
 The **Dashboard** can be viewed here: 
