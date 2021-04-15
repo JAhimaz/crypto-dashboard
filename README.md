@@ -13,4 +13,4 @@ The **Dashboard** can be viewed here:
 - Optimised for mobile view.
 
 ## Future Updates:
-- Further improvements soon such as viewing individual coins
+- Further improvements soon such as viewing individual coins.
