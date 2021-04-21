@@ -14,3 +14,4 @@ The **Dashboard** can be viewed here:
 
 ## Future Updates:
 - Further improvements soon such as viewing individual coins.
+- Price Checker
